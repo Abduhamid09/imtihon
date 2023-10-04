@@ -1,0 +1,121 @@
+header {
+    padding: 19px 0 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .logo {
+        display: flex;
+        gap: 15px;
+
+        h1 {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 30px;
+        }
+    }
+
+    .header_aside {
+        align-items: center;
+        display: flex;
+        gap: 24px;
+
+        %btn {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 22px 9px 25px;
+            border-radius: 4px;
+        }
+
+        ul {
+            display: flex;
+            gap: 15px;
+
+            a {
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 16px;
+                text-decoration: none;
+            }
+        }
+
+        button {
+            &:nth-child(2) {
+                border: 1px solid #BCD0E5;
+                @extend %btn;
+                background: none;
+            }
+
+            &:nth-child(3) {
+                @extend %btn;
+                background: #02897A;
+                border: none;
+            }
+        }
+
+        img {
+            &:nth-child(5) {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 990px) {
+    header {
+        .logo {
+            gap: 4%;
+            align-items: center;
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+
+        .header_aside {
+            gap: 15px;
+
+            ul {
+                gap: 9px;
+
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 790px) {
+    header {
+        .header_aside {
+            ul {
+                display: none;
+            }
+
+            button {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 447px) {
+    header {
+        .header_aside{
+        img {
+            &:nth-child(4) {
+                display: none;
+            }
+
+            &:nth-child(5) {
+                display: block;
+            }
+        }            
+        }
+
+    }
+}
